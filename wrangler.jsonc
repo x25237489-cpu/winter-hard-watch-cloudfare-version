@@ -1,0 +1,18 @@
+{
+  "name": "winter-hard-api-cloudflare",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-23",
+  "workers_dev": true,
+  "ratelimits": [
+    {
+      "name": "IP_RATE_LIMITER",
+      "namespace_id": "25237489",
+      "simple": { "limit": 6, "period": 60 }
+    },
+    {
+      "name": "GLOBAL_RATE_LIMITER",
+      "namespace_id": "25237490",
+      "simple": { "limit": 30, "period": 60 }
+    }
+  ]
+}
